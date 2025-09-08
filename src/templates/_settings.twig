@@ -1,0 +1,40 @@
+{% block header %}
+    <header class="pane-header so-visible">
+        <h2 style="line-height: 34px">{{ 'Import/Export'|t('guido') }}</h2>
+    </header>
+{% endblock %}
+<div class="so-body ">
+    <p>{{ 'Your content, fields, etc.'|t('guido') }}</p>
+    <div class="flex" style="justify-content: space-between;align-items: baseline;">
+        <form style="width:45%;">
+            {{ csrfInput() }}
+            {{ actionInput('guido/guido/export') }}
+            <div class="field">
+                <div class="heading">
+                    <label >{{ 'Export'|t('guido') }}</label>
+                </div>
+                <div class="instructions">
+                    <p>{{ 'You‘ll be able to import this file later on the same, or a different environment.'|t('guido') }}</p>
+                </div>
+                <button type="submit" class="btn ">{{ 'Export'|t('guido') }}</button>
+            </div>
+
+        </form>
+        <form method="post" accept-charset="UTF-8" enctype="multipart/form-data"  style="width:45%;">
+            {{ csrfInput() }}
+            {{ actionInput('guido/guido/import') }}
+            <div class="field" >
+                <div class="heading">
+                    <label >{{ 'Import File'|t('guido') }}</label>
+                </div>
+                <div class="instructions">
+                    <p>{{ 'Upload the JSON file that‘s been exported from Craft Helper.'|t('guido') }}</p>
+                </div>
+                <div class="input ltr">
+                    <input type="file" name="file" >
+                </div>
+            </div>
+            <button class="btn ">{{ 'Import'|t('guido') }}</button>
+        </form>
+    </div>
+</div>

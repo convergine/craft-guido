@@ -1,0 +1,15 @@
+.guido-search-results{
+
+}
+.guido-search-results div{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+.guido-search-results a{
+    text-decoration: underline;
+    font-size: 18px;
+}
+.guido-search-results p{
+
+}

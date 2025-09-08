@@ -1,0 +1,41 @@
+{
+    "name": "convergine/craft-guido",
+    "description": "Guido",
+    "type": "craft-plugin",
+    "version": "1.0.1",
+    "keywords": [
+        "craftcms"
+    ],
+    "support": {
+        "issues": "https://github.com/convergine/craft-guido/issues?state=open",
+        "source": "https://github.com/convergine/craft-guido",
+        "docs": "https://github.com/convergine/craft-guido/blob/master/README.md",
+        "support": {
+            "email": "info@convergine.com"
+        }
+    },
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Convergine Corp.",
+            "homepage": "https://www.convergine.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^5.0.0",
+        "league/commonmark": "^2.7.1"
+    },
+    "autoload": {
+        "psr-4": {
+          "convergine\\guido\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Guido",
+        "handle": "guido",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "https://github.com/convergine/craft-guido/blob/master/CHANGELOG.md",
+        "class": "convergine\\guido\\GuidoPlugin"
+    }
+}

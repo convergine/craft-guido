@@ -1,0 +1,62 @@
+{% import "_includes/forms" as forms %}
+{% block header %}
+    <header class="pane-header so-visible">
+        <h2 style="line-height: 34px">{{ title }}</h2>
+    </header>
+{% endblock %}
+
+{% block body %}
+    <div class="so-body " style="padding-top: 0">
+
+        <form method="post" accept-charset="UTF-8" id="article-edit">
+
+
+            {{ csrfInput() }}
+            {{ actionInput('guido/guido/save') }}
+            {{ hiddenInput('id', article.id??"" ) }}
+            <div class="field">
+                <div class="heading">{{ 'Title'|t('guido') }}</div>
+                <div class="input">
+                    <input type="text" class="text fullwidth" required name="title" value="{{ article.title??"" }}">
+                </div>
+            </div>
+            <div class="flex" style="justify-content: space-between">
+                <div class="field" style="width: 75%">
+                    <div class="heading">{{ 'Menu Title'|t('guido') }}</div>
+                    <div class="input">
+                        <input type="text" class="text fullwidth" required name="menuTitle" value="{{ article.menuTitle??"" }}">
+                    </div>
+                </div>
+                <div class="field" style="width: 22%">
+                    <div class="heading">{{ 'Position'|t('guido') }}</div>
+                    <div class="input">
+                        <input type="number" class="text fullwidth" required name="position" value="{{ article.position??"" }}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="heading">{{ 'Body'|t('guido') }}</div>
+                <div class="input">
+                    <textarea name="body" id="bodyTextarea" class=" text fullwidth" required style="height: 200px">{{ article.body??"" }}</textarea>
+                </div>
+            </div>
+            <h3>{{ 'Preview'|t('guido') }}</h3>
+            <div style="height: 200px;overflow: auto;border: 1px solid #ccc;border-radius: 3px;padding: 5px;" id="bodyPreview">
+                {% if article is defined and article %}
+                    {{ article.getBody()|raw }}
+                {% endif %}
+            </div>
+
+        </form>
+    </div>
+    <div class="so-footer">
+        <div class="so-notice"></div>
+        <div class="flex-grow"></div>
+        <div class="flex flex-nowrap">
+            <button type="button" class="btn js-close-slideout">{{ 'Cancel'|t('guido') }}</button>
+            <button type="submit" class="btn submit" form="article-edit">{{ 'Save'|t('guido') }}</button>
+        </div>
+    </div>
+{% endblock %}
+

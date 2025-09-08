@@ -1,0 +1,61 @@
+{% extends '_layouts/cp' %}
+
+
+
+{% set plugin = craft.app.getModule('guido') %}
+{% set crumbs = [
+    { label: 'Guido'|t('guido')  , url: url('guido') },
+] %}
+{% import "_includes/forms" as forms %}
+
+{% set title = 'Guido'|t('guido') %}
+
+{% if currentArticle and currentUser and currentUser.admin %}
+    {% set additionalButtons = include ('guido/components/article_buttons') %}
+{% endif %}
+
+{% set toolbar = include ('guido/components/search_bar') %}
+
+{% block sidebar %}
+    <nav class="mb-5">
+        <ul>
+            {% for article in articles %}
+
+                <li>
+                    <a href="{{ article.getUrl() }}"
+                       class="{% if currentArticle and currentArticle.id == article.id %}sel{% endif %}"
+                    >{{ article.title }}</a>
+                </li>
+
+            {% endfor %}
+        </ul>
+    </nav>
+    {% if currentUser and currentUser.admin  %}
+    <div class="buttons">
+        <button class="btn submit add icon openSlideout">{{ 'Create'|t('guido') }}</button>
+
+        <button class="btn  settings icon" id="openSettings"></button>
+    </div>
+    {% endif %}
+
+{% endblock %}
+
+{% block content %}
+    {% if importError %}
+        <div class="error">{{ importError }}</div>
+    {% endif %}
+    {% if currentArticle %}
+        <div class="position-relative">
+            <h2>{{ currentArticle.title }}</h2>
+            <div>
+                {{ currentArticle.getBody()|raw }}
+            </div>
+        </div>
+    {% endif %}
+
+{% endblock %}
+
+{% js %}
+    {# language=JavaScript #}
+
+{% endjs %}

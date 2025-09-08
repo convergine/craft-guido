@@ -1,0 +1,10 @@
+<form class="fullwidth" action="{{ cpUrl('guido/search') }}">
+
+    <div class="search-container flex-grow texticon has-filter-btn">
+        <span class="texticon-icon search icon" aria-hidden="true"></span>
+        <input type="text" id="guido-search" name="keyword" class="clearable text fullwidth" autocomplete="off" placeholder="{{ 'Search'|t('app') }}" dir="ltr"
+               aria-label="{{ 'Search'|t('app') }}">
+        <button class="clear-btn hidden" title="{{ 'Clear search'|t('app') }}" role="button" aria-label="{{ 'Clear search'|t('app') }}"></button>
+
+    </div>
+</form>

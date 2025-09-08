@@ -1,0 +1,21 @@
+{% extends 'guido/_list' %}
+
+{% block content %}
+
+
+        <div class="position-relative">
+            <h2>{{ 'Search results for "{keyword}"'|t('guido', params = {
+                    keyword: keyword
+                } ) }}</h2>
+            <div class="guido-search-results">
+                {% for entry in results %}
+                    <div>
+                        <a href="{{ entry.url }}">{{ entry.title|raw }}</a>
+                        <p>{{ entry.text|raw }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+
+{% endblock %}
