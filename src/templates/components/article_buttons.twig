@@ -4,5 +4,5 @@
     {{ actionInput('guido/guido/delete') }}
     {{ hiddenInput('id', currentArticle.id ) }}
     <button type="submit" class="btn submit"
-            onclick="return confirm('{{ 'Are you sure to remove this article? You will not be able to undo this action.'|t('guido') }}')">{{ 'Delete'|t('guido') }}</button>
+            onclick="return confirm('{{ 'Are you sure you would like to remove this article? You will not be able to undo this action.'|t('guido') }}')">{{ 'Delete'|t('guido') }}</button>
 </form>
