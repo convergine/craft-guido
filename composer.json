@@ -2,7 +2,7 @@
     "name": "convergine/craft-guido",
     "description": "Craft CMS plugin that lets you create and manage in-panel guides for your clients and team. Write guides in Markdown, search, and embed images or links. Perfect for providing project documentation, onboarding instructions, and editor handbooks directly inside the Craft control panel.",
     "type": "craft-plugin",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "keywords": [
       "craftcms",
       "craft",
