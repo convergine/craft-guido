@@ -28,12 +28,12 @@ class Install extends Migration {
 			] );
 
 			$record = new Articles();
-			$record->title = 'Getting Started with Helper';
+			$record->title = 'Getting Started with Guido';
 			$record->menuTitle = 'Getting Started';
 			$record->position = 1;
-			$record->body = '👋 Getting Started with Helper hello
+			$record->body = '👋 Getting Started with Guido
 
-Thank you for installing the **Helper** plugin for CraftCMS.
+Thank you for installing the **Guido** plugin for CraftCMS.
 
 This section is here to guide you in setting up and maintaining your internal knowledge base.
 
@@ -67,11 +67,7 @@ This section is here to guide you in setting up and maintaining your internal kn
 ### Lists
 - Point A  
 - Point B  
-  - Nested point  
-
-### Code Block
-```html
-echo "<p>Hello from Helper!</p>";"';
+  - Nested point';
 			try {
 				$record->save();
 			} catch ( Exception $e ) {
