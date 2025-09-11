@@ -24,7 +24,7 @@
                 <li>
                     <a href="{{ article.getUrl() }}"
                        class="{% if currentArticle and currentArticle.id == article.id %}sel{% endif %}"
-                    >{{ article.title }}</a>
+                    >{{ article.menuTitle }}</a>
                 </li>
 
             {% endfor %}
