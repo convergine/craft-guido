@@ -31,18 +31,18 @@
         </ul>
     </nav>
     {% if currentUser and currentUser.admin  %}
-    <div class="buttons">
-        <button class="btn submit add icon openSlideout">{{ 'Create'|t('guido') }}</button>
+        <div class="buttons">
+            <button class="btn submit add icon openSlideout">{{ 'Create'|t('guido') }}</button>
 
-        <button class="btn  settings icon" id="openSettings"></button>
-    </div>
+            <button class="btn  settings icon" id="openSettings"></button>
+        </div>
     {% endif %}
 
 {% endblock %}
 
 {% block content %}
     {% if importError %}
-        <div class="error">{{ importError }}</div>
+        <ul id="alerts" class="mb-xl"><li>{{ importError }}</li></ul>
     {% endif %}
     {% if currentArticle %}
         <div class="position-relative">
