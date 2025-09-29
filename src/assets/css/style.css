@@ -13,3 +13,16 @@
 .guido-search-results p{
 
 }
+.guido-content ul{
+    list-style: disc;
+}
+.guido-content ol{
+    list-style: decimal;
+}
+.guido-content ul,.guido-content ol {
+
+    padding-left: 13px;
+}
+.guido-content ul li,.guido-content ol li{
+
+}

@@ -42,7 +42,7 @@
                 </div>
             </div>
             <h3>{{ 'Preview'|t('guido') }}</h3>
-            <div style="height: 200px;overflow: auto;border: 1px solid #ccc;border-radius: 3px;padding: 5px;" id="bodyPreview">
+            <div style="height: 200px;overflow: auto;border: 1px solid #ccc;border-radius: 3px;padding: 5px;" class="guido-content" id="bodyPreview">
                 {% if article is defined and article %}
                     {{ article.getBody()|raw }}
                 {% endif %}
