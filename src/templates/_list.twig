@@ -46,7 +46,7 @@
     {% endif %}
     {% if currentArticle %}
         <div class="position-relative">
-            <h2>{{ currentArticle.title }}</h2>
+            <h1>{{ currentArticle.title }}</h1>
             <div class="guido-content">
                 {{ currentArticle.getBody()|raw }}
             </div>
