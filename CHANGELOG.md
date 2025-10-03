@@ -3,6 +3,7 @@
 ## 1.0.3 - 2025-10-03
 ### Fixed
 - lists styling fixed (markdown)
+
 ### Added
 - added pre-made manuals
 
